@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+#board {
+	background: white;
+	display: none;
+}
+
+#play {
+	border: 1px solid black;
+	display: block;
+	width: 2.5%;
+	margin: 25% auto auto auto;
+	padding: 1%;
+}
+
+
+#restart {
+	border: 1px solid black;
+	display: none;
+	width: 3.5%;
+	margin: 1% auto auto auto;
+	padding: 1%;
+}
+
+.button:hover {
+	color: red;
+	cursor: pointer;
+}
+
+#score {
+	display: none;
+	width: 3.5%;
+	margin: 20% auto auto auto;
+}
