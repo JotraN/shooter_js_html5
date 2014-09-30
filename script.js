@@ -3,7 +3,8 @@ var lives = 3;
 
 function main(){
 	$("#board").css("display", "block");
-	$("#play").css("display", "none");
+	$("#play").hide();
+	$("#description").hide();
 	$("#board").attr("width", $(window).width());
 	$("#board").attr("height", $(window).height());
 	var game = new Game();
@@ -41,15 +42,17 @@ function Game(){
 	var gameover = function(){
 		objectManager.clear();
 		$("#board").hide();	
+		$("#description").show();
 		$("#score").html("score: " + score);
 		$("#score").show();
-		$("#restart").css("display", "block");
+		$("#restart").show();
 		$("#restart").click(function(){
 			reset();	
 		});
 	};
 	var reset = function(){
 		$("#restart").hide();
+		$("#description").hide();
 		$("#score").hide();
 		$("#board").show();	
 		objectManager.clear();
@@ -143,6 +146,7 @@ function Player(canvas){
 			changeColors();
 		});
 		$("#board").keydown(function(event){
+			event.preventDefault();
 			if(event.which == 38 || event.which == 87)
 				velY = -self.speed;
 			else if(event.which == 40 || event.which == 83)

@@ -1,12 +1,21 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href='http://fonts.googleapis.com/css?family=Exo+2:400,600' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<title>Shooter</title>
 </head>
 <body>
+	<div id="description">
+		<strong>How to Play:</strong><br>Use the arrow keys or wasd to move.<br>Point and click to shoot.<br>
+		Click the play button below to start.<br>
+		<em>Browser extentions (e.g. Vimium) may override certain keys like the 'd' key.</em><br>
+		<a href="https://github.com/JotraN/shooter_js_html5">Source.</a><br>
+		<a href="http://jotran.github.io">Other cool stuff.</a>
+	</div>
 	<div id="play" class="button" onclick="main()">play</div>
-	<div id="score"></div>
 	<div id="restart" class="button">restart</div>
+	<div id="score"></div>
 	<canvas id="board" tabindex="1" width="800px" height="800px"></canvas>
 	<script src="script.js"></script>
 </body>
