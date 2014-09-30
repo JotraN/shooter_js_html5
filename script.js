@@ -52,7 +52,7 @@ function Game(){
 	};
 	var reset = function(){
 		$("#restart").hide();
-		$("#description").show();
+		$("#description").hide();
 		$("#score").hide();
 		$("#board").show();	
 		objectManager.clear();
@@ -154,6 +154,7 @@ function Player(canvas){
 				velX = -self.speed;
 			else if(event.which == 39 || event.which == 68)
 				velX = self.speed;
+			console.log(event.which);
 		});
 		$("#board").keyup(function(event){
 			if(event.which == 38 || event.which == 87 || event.which == 40 || event.which == 83)
