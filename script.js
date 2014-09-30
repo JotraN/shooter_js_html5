@@ -146,6 +146,7 @@ function Player(canvas){
 			changeColors();
 		});
 		$("#board").keydown(function(event){
+			event.preventDefault();
 			if(event.which == 38 || event.which == 87)
 				velY = -self.speed;
 			else if(event.which == 40 || event.which == 83)
@@ -154,7 +155,6 @@ function Player(canvas){
 				velX = -self.speed;
 			else if(event.which == 39 || event.which == 68)
 				velX = self.speed;
-			console.log(event.which);
 		});
 		$("#board").keyup(function(event){
 			if(event.which == 38 || event.which == 87 || event.which == 40 || event.which == 83)
